@@ -7,9 +7,9 @@
           {{ attr }}="{{ value }}"
         {%- endfor %}{% if breadcrumb.attributes.class is not defined %} class="{{ class }}"{% endif %}>
       {%- if breadcrumb.url is null or loop.last -%}
-        {{ breadcrumb.title|trans }}
+        {{ breadcrumb.title|trans({}, breadcrumb.domain) }}
       {%- else -%}
-        <a href="{{ breadcrumb.url }}">{{ breadcrumb.title|trans }}</a>
+        <a href="{{ breadcrumb.url }}">{{ breadcrumb.title|trans({}, breadcrumb.domain) }}</a>
       {%- endif -%}
     </li>
   {% endfor %}
