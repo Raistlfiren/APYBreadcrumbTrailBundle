@@ -52,6 +52,11 @@ class Breadcrumb
     private $attributes = array();
 
     /**
+     * @var domain used for the breadcrumb translation
+     */
+    private $domain;
+
+    /**
      * Constructor.
      *
      * @param Array $data An array of annotation values
@@ -192,5 +197,20 @@ class Breadcrumb
     public function getAttributes()
     {
         return $this->attributes;
+    }
+
+    /**
+     * Sets the domain for the breadcrumb translation.
+     *
+     * @param string $domain for the breadcrumb translation.
+     */
+    public function setDomain($domain)
+    {
+        $this->domain = $domain;
+    }
+
+    public function getDomain()
+    {
+        return $this->domain;
     }
 }

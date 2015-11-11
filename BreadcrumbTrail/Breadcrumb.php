@@ -31,16 +31,23 @@ class Breadcrumb
     public $attributes;
 
     /**
+     * @var string domain for the breadcrumb translation
+     */
+    public $domain;
+
+    /**
      * Constructor.
      *
      * @param string $title Title of the breadcrumb
      * @param string $url Url of the breadcrumb
      * @param mixed $attributes Additional attributes for the breadcrumb
+     * @param string $domain for the translation of the breadcrumb
      */
-    public function __construct($title, $url = null, $attributes = array())
+    public function __construct($title, $url = null, $attributes = array(), $domain = null)
     {
         $this->title = $title;
         $this->url = $url;
         $this->attributes = $attributes;
+        $this->domain = $domain;
     }
 }
