@@ -8,7 +8,7 @@ use APY\BreadcrumbTrailBundle\BreadcrumbTrail\Trail;
 /**
  * Class TitleExtension
  */
-class TitleExtension extends \Twig_Extension
+class TitleExtension extends \Twig_Extension implements \Twig_Extension_GlobalsInterface
 {
     /** @var Trail $_trail */
     private $_trail;
